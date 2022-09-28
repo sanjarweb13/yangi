@@ -1,0 +1,328 @@
+:root {
+  --primary-color: #2155cd;
+  --primary-text-color: #1f2937;
+  --dark-color: #00092c;
+  --light-color: #f4f4f4;
+  --secondary-color: #eee;
+  --secondary-text-color: #143f6b;
+}
+
+/**************************************** NavBar style **********************************************/
+.navbar {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  height: 70px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  padding: 10px;
+  margin: 0 5px;
+  font-weight: 650;
+  color: var(--light-color);
+}
+
+.navbar a:hover {
+  background-color: var(--light-color);
+  color: var(--primary-color);
+  border-radius: 2px;
+  font-weight: 650;
+}
+
+/* ************************************Showcase*************************/
+.showcase {
+  height: 400px;
+  background: url(/images/cyber-scurity.jpg) no-repeat;
+  width: 100%;
+}
+.showcase-text {
+  padding-left: 15px;
+  color: var(--light-color);
+}
+.showcase h1 {
+  font-size: 40px;
+}
+
+.showcase p {
+  margin: 20px 0;
+}
+
+.showcase .grid {
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+  overflow: visible;
+}
+.showcase-form {
+  position: relative;
+  top: 60px;
+  height: 400px;
+  width: 350px;
+  z-index: 100;
+  justify-self: flex-end;
+}
+
+.showcase-form .form-control {
+  margin: 30px 0;
+}
+
+.showcase-form input[type="text"],
+.showcase-form input[type="password"] {
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+  background-color: #f4f4f4;
+}
+
+.showcase-form input:focus {
+  outline: none;
+}
+
+.showcase::before,
+.showcase::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: 211px;
+  right: 0;
+  left: 0;
+  background-color: white;
+  transform: skewY(-3deg);
+}
+
+/********************************* Stats ********************************/
+.stats {
+  padding-top: 100px;
+}
+
+.stats-heading {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.stats .grid h3 {
+  font-size: 24px;
+}
+.stats .grid p {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(44, 0, 75);
+}
+
+/* ************************** More*************************************** */
+.more .grid {
+  grid-template-columns: 4fr 3fr;
+}
+.section-height {
+  height: 350px;
+}
+.more h2 {
+  color: var(--light-color);
+}
+.more p {
+  color: var(--light-color);
+  font-weight: 500;
+}
+
+/* ***************************Footer************************************* */
+.footer .social a {
+  margin: 0 10px;
+}
+
+/* Keyframes */
+@keyframes bitcoin {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+.imgbitcoin {
+  animation: bitcoin 3s infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+footer ul a:hover {
+  text-decoration: underline;
+}
+
+/* ******************Responsive****************** */
+/* planshet(tablet va undan kichkina ekranlar uchun */
+@media (max-width: 768px) {
+  .grid,
+  .showcase .grid,
+  .stats .grid {
+    grid-template-columns: 1fr;
+  }
+  .showcase {
+    height: auto;
+  }
+  .showcase-text {
+    text-align: center;
+    margin-top: 40px;
+  }
+  .showcase-form {
+    justify-self: center;
+  }
+  .footer .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .fa-brands {
+    transform: scale(0.6);
+  }
+  .showcase::before,
+  .showcase::after {
+    display: none;
+  }
+}
+
+/* telefonlar uchun */
+@media (max-width: 500px) {
+  .navbar {
+    height: 110px;
+  }
+  .navbar .flex {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .more .grid,
+  .ftrresp {
+    grid-template-columns: 1fr;
+  }
+  .social {
+    display: flex;
+  }
+  .section-height {
+    height: 550px;
+  }
+  body {
+    height: 100%;
+  }
+  p {
+    font-size: small;
+  }
+}
+
+/* **************************Features************** */
+.ftrbckgrimg {
+  background: url(/images/2666403.webp) no-repeat center;
+}
+.items {
+  border-radius: 8px;
+  color: var(--secondary-text-color);
+  background-color: var(--secondary-color);
+}
+.items:hover {
+  color: var(--secondary-color);
+  background-color: var(--secondary-text-color);
+}
+.mobil-aloqa {
+  background-color: var(--secondary-text-color);
+  color: #fff;
+}
+.h1 {
+  font-size: 24px;
+  margin-top: 100px;
+}
+.h3 {
+  padding: 25px 15px;
+  font-size: 19px;
+  cursor: pointer;
+}
+.fa-mobile-screen-button {
+  float: right;
+}
+.contain2 {
+  height: 300px;
+  top: 80px;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: var(--secondary-color);
+  color: var(--secondary-text-color);
+  bottom: 50px;
+}
+.inputs {
+  padding: 20px 0;
+}
+.inputs input {
+  padding: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  height: 50px;
+  width: 200px;
+}
+.btn-right {
+  float: right;
+}
+.btnd {
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  border: solid 1px lightgrey;
+  border-radius: 5px;
+  background-color: red;
+  color: #fff;
+}
+
+.btn-style {
+  margin: 50px 0;
+}
+.ftrbtn {
+  justify-self: flex-end;
+}
+.ftr.btn.img img {
+  border-radius: 5px;
+}
+
+.ftrmatn p {
+  font-size: 18px;
+}
+
+@media (max-width: 500px) {
+  section {
+    width: 100%;
+  }
+  .contain1 h3 {
+    grid-template-columns: 1fr;
+  }
+  .contain2 {
+    height: 500px;
+  }
+  .contain2 form {
+    grid-template-columns: 1fr;
+  }
+  ontain2 form h5 {
+    margin-top: 10px;
+  }
+}
+
+/* *******************Batafsil.html***************** */
+.batafsilimg:hover {
+  opacity: 0.8;
+}
+/* *******************Docs.html */
+.docsbody {
+  background-image: url(/images/shutterstock_650051500.jpg);
+  color: var(--light-color);
+}
+.docsimg img {
+  border-radius: 5px;
+}
+
+.active-link {
+  background-color: var(--secondary-text-color);
+  border-radius: 2px;
+  font-weight: 650;
+}
